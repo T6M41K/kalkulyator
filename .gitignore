@@ -1,32 +1,23 @@
-# Prerequisites
-*.d
+// дз.cpp
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <iostream>
+#include <locale.h> //библиотеки 
+#include <stdlib.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+using namespace std;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+int main()
+{
+	setlocale(LC_ALL, "rus"); // локализация 
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+	
+	cout << "----Программа для вычислениядюймов и сантиметров----"<< endl; // описание программы
+	const float inch = 2.54; // константа которую нельзя изменить + float вместо int из-за десятичных чисел дробных
+	double centimeters, answer; // сантиметры
+	cout << "Введите дюймы: "; cin >> centimeters;
+	answer = inch * centimeters;  // математические операции 
+	cout << "Cтолько сантиметров: " << answer << endl;
+	cout << "Введите сантиметры: "; cin >> centimeters;
+	answer = centimeters / inch; // математические операции 
+	cout << "Столько Дюймов: " << answer << endl;
+	system("pause"); // запрос нажатие любой клавиши
